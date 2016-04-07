@@ -1,0 +1,36 @@
+***NOTE: PLACE THE SHELL SCRIPTS i.e. "event_shell.sh" and "build_deb.sh" TOGETHER and execute "event_shell.sh"***
+
+
+
+INTRODUCTION:
+I was assigned a task in which i've to :
+
+Create a command line tool that 
+ * builds eventlog in a docker image
+ * creates debian package
+ * creates a minimal release draft on github
+ 
+
+
+CONCLUSIONS:
+ I've successfully accomplished all the above mentioned tasks. 
+ 
+
+
+WORKING OF SHELL SCRIPT:
+The attached shell script runs in root environment.
+The required packages will get downloaded on their own and the building of eventlog will take place via "Dockerfile".
+I've attached the "Dockerfile" in eventlog repository forked in my github i.e. "chawlanikhil24/eventlog"
+After the successfull building of eventlog, now the shell script will execute the github drafting part.
+For the excecution of release draft, there are 3 parameters:
+  1) github <username>
+  2) github <repository-name>
+  3) github <token> #incase if you don't have the github token, then you can get one at; https://github.com/settings/tokens
+After the input of above 3 parameters the job will be complete.
+Then at last the shell script for building a debian package will execute and it also has a few PARAMETERS while executing.
+  1) name
+  2) email_id (abcd@xyz.com)
+
+ALTLAST, I'd like to thank Mr. Budai Laszlo for his guidance throughout the assignment.
+
+THANK YOU!
